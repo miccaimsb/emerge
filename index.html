@@ -1,19 +1,211 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>EMERGE 25</title>
+		<title>MICCAI EMERGE 2025</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/logos/logos.png">
 		<style>
 			body {
-				font-size: 14px !important; /* Change this to your desired font size */
+				font-size: 14px !important;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.section {
+				margin-bottom: 2em;
+				padding: 1.5em;
+				background-color: #f8f9fa;
+				border-radius: 8px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+			
+			.section h2 {
+				color: #3e6a88;
+				border-bottom: 2px solid #e9ecef;
+				padding-bottom: 0.5em;
+				margin-bottom: 0.8em;
+			}
+			
+			.section ul {
+				padding-left: 1.5em;
+			}
+			
+			.section ul li {
+				margin-bottom: 0.5em;
+				list-style-type: none;
+				position: relative;
+				padding-left: 1.5em;
+			}
+			
+			.section ul li:before {
+				content: '•';
+				position: absolute;
+				left: 0;
+				color: #3e6a88;
+			}
+			
+			.speaker-profile {
+				background-color: #f8f9fa;
+				border-radius: 8px;
+				padding: 1.5em;
+				margin-bottom: 2em;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+			
+			.speaker-profile article {
+				display: flex;
+				align-items: flex-start;
+			}
+			
+			.speaker-profile .image {
+				flex: 0 0 150px;
+			}
+			
+			.speaker-profile .content {
+				flex: 1;
+				margin-left: 20px;
+				padding: 10px;
+			}
+			
+			.speaker-profile h3 {
+				color: #3e6a88;
+				margin-top: 0;
+			}
+			
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1em 0;
+				background-color: white;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+			
+			thead {
+				background-color: #3e6a88;
+				color: white;
+			}
+			
+			th, td {
+				padding: 12px;
+				text-align: left;
+				border-bottom: 1px solid #e9ecef;
+			}
+			
+			tr:nth-child(even) {
+				background-color: #f8f9fa;
+			}
+			
+			.features article {
+				background-color: #f8f9fa;
+				border-radius: 8px;
+				padding: 1.5em;
+				margin-bottom: 1em;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+			
+			.features article .image {
+				border-radius: 50%;
+				overflow: hidden;
+				border: 3px solid #3e6a88;
+			}
+			
+			.features article h3 {
+				color: #3e6a88;
+				margin-top: 0;
+			}
+			
+			.highlight-box {
+				background-color: #e9f7fe;
+				border-left: 4px solid #3e6a88;
+				padding: 1em;
+				margin: 1em 0;
+				border-radius: 0 8px 8px 0;
+			}
+			
+			header.major h2 {
+				color: #3e6a88;
+				border-bottom: 2px solid #e9ecef;
+				padding-bottom: 0.5em;
+			}
+			
+			#header {
+				background-size: cover !important;
+				height: 30vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+			
+			#header::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.1);
+				z-index: 1;
+			}
+			
+			.workshop-title {
+				text-align: center;
+				color: #3e6a88;
+				font-size: 1.4em;
+				font-weight: 600;
+				margin: 1.5em 0;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.important-dates-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1em 0;
+			}
+			
+			.important-dates-table td {
+				padding: 8px;
+				border-bottom: 1px solid #e9ecef;
+			}
+			
+			.important-dates-table td:first-child {
+				font-weight: 600;
+				width: 40%;
+			}
+			
+			.btn {
+				display: inline-block;
+				background-color: #3e6a88;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 4px;
+				text-decoration: none;
+				font-weight: 600;
+				transition: background-color 0.3s;
+				margin: 10px 0;
+			}
+			
+			.btn:hover {
+				background-color: #2c4d64;
+			}
+			
+			@media screen and (max-width: 768px) {
+				.speaker-profile article,
+				.features article {
+					flex-direction: column;
+				}
+				
+				.speaker-profile .content,
+				.features .content {
+					margin-left: 0;
+					margin-top: 1em;
+				}
 			}
 		</style>
 	</head>
@@ -29,292 +221,342 @@
 							<header id="header" style="
 							background: url('images/logos/emerge_daejeon.png') no-repeat center center;
 							background-size: cover;
-							height: 30vh; /* Adjust height as needed */
+							height: 30vh;
 							display: flex;
 							align-items: center;
 							justify-content: center;
 						">
 						</header>
-							<br> <p style="text-align: center; color: black; font-size: 1.2em;">THE 2ND MICCAI STUDENT BOARD (MSB) WORKSHOP </p> 
-							<!-- Banner -->
-								<!-- <section id="banner">
-									<div class="content"> 
-										<style>
-											#banner .content p {
-												text-align: center;
-											}
-										</style>
-										<header>
-											<p>The 2nd MICCAI Student Board (MSB) Workshop</p>
-										</header>
 
-
-									</div>
-
-									
-								</section> -->
 								<section id="news">
+									<p class="workshop-title">THE 2ND MICCAI STUDENT BOARD (MSB) EMERGE WORKSHOP</p> 
 									<div class="content">
 										<header class="major">
-											<h2> News </h2>
+											<h2>News</h2>
 										</header>	
-										<p>
-											📍 EMERGE 25 will be held in-person as a half-day satellite event of MICCAI 2025 in Daejeon, South Korea 🇰🇷
-										</p>
+										<div class="highlight-box">
+											<p>
+												📍 MSB EMERGE 25 will be held in-person as a half-day satellite event of MICCAI 2025 in Daejeon, South Korea 🇰🇷
+											</p>
+										</div>
 										<header class="major">
-											<h2> Overview </h2>
+											<h2>Overview</h2>
 										</header>
 										<div class="container">
-											<h3> Fostering the Next Generation of Leaders in Medical Image Computing</h3>									
+											<h3>Fostering the Next Generation of Leaders in Medical Information Computing</h3>									
 											<div class="section">
 												<h2>🌟 What is EMERGE?</h2>
 												<p>
-													The <strong>MSB EMERGE Workshop</strong>, now in its <strong>second edition</strong>, is a platform dedicated to <strong>empowering student-led research</strong> within the MICCAI community. Building on the success of its inaugural year, EMERGE offers early-career researchers a unique opportunity to <strong>present and discuss their work, engage with senior researchers, and foster new collaborations.</strong>
+													The <strong>MICCAI Student Board EMERGE Workshop</strong>, now in its <strong>second edition</strong>, is a platform dedicated to <strong>empowering early-career, student-led research</strong> within the MICCAI community. Building on the success of its inaugural year, EMERGE offers early-career researchers a unique opportunity to <strong>present and discuss their work, engage with senior researchers, and foster new collaborations</strong> in a mentorship-oriented and supportive setting.
 												</p>
 												<p>
-													Organized <strong>by students, for students</strong>, the workshop encourages independent research by supporting young investigators in their <strong>scientific and professional development</strong>. EMERGE provides an inclusive and supportive environment for students at <strong>all levels—undergraduate, master’s, and doctoral</strong>—to showcase their contributions <strong>to medical image computing and computer-assisted interventions.</strong>
+													Organized <strong>by students, for students</strong>, the workshop encourages independent research by <strong>supporting young investigators in their scientific and professional development</strong>. EMERGE provides an inclusive and supportive environment for students at all levels—undergraduate, master's, and doctoral—as well as recent graduates and early-career researchers to showcase their contributions to medical image computing and computer-assisted interventions.
+													<strong>Presentations are designed to be mentorship- and constructive feedback–oriented</strong>, designed to provide constructive feedback from senior experts. The program includes keynotes by successful early-career researchers and career development talks tailored to young scientists.
 												</p>
-												<b>Note:</b> <i> Young scientists as last authors preferred but not required. We also welcome joint co-last author, and first author papers by young scientists irrespective of last author status. </i>
-
+												<div class="highlight-box">
+													<b>Note:</b> <i>Young scientists as last authors preferred but not required. We also welcome joint co-last author, and first author papers by young scientists irrespective of last author status.</i>
+												</div>
 											</div>
 											<br>
 											<div class="section">
 												<h2>🎯 Why Attend?</h2>
 												<ul>
-													<li> <strong>Showcase your research</strong> at MICCAI 2025 in Daejeon</li>
-													<li> <strong>Engage with senior MICCAI experts</strong> for feedback and mentorship</li>
-													<li> <strong>Network</strong> with peers and potential collaborators</li>
-													<li> <strong>Enhance the visibility</strong> of your work through oral and poster presentations</li>
+													<li><strong>Showcase your research</strong> at MICCAI 2025 in Daejeon and gain visibility in the global medical imaging community</li>
+													<li><strong>Receive expert feedback from senior MICCAI researchers</strong> through mentorship-oriented oral sessions</li>
+													<li><strong>Network</strong> with peers, mentors and potential collaborators in a supportive setting</li>
+													<li><strong>Enhance the visibility</strong> of your work through oral and poster presentations</li>
+													<li><strong> Tailored keynotes and sessions for young scientists</strong> by the MICCAI Student Board</li>
+													<li><strong>Opportunity to extend your work</strong> to MELBA – The Journal of Machine Learning for Biomedical Imaging</li>
 												</ul>
 											</div>
 									
 											<div class="section">
 												<h2>📝 Submission Categories</h2>
 												<ul>
-													<li> <strong>Archival Track</strong>: Full-length papers published in <strong>Springer’s LNCS</strong> proceedings.</li>
-													<li> <strong>Non-Archival Track</strong>: Present your accepted MICCAI (main conference) poster as an <strong>oral presentation</strong> at EMERGE (<i>upon selection only</i>).</li>
+													<li><strong>Archival Track</strong>: Full-length papers must present original research not published or under review elsewhere during the review period. Submissions will undergo double-blind peer review. Accepted papers will be published in <strong>Springer LNCS</strong> proceedings.</li>
+													<li><strong>Non-Archival Track</strong>: Authors of accepted MICCAI 2025 (main conference) posters may present their work as an <strong>oral talk</strong> at EMERGE. These submissions will undergo a light, single-blind review for relevance and fit. The presenting author must be a young scientist.</li>
 												</ul>
 											</div>
 									
 											<div class="section">
 												<h2>🔬 Scientific Focus</h2>
-												<p>EMERGE 2025 aligns with the MICCAI Society’s emphasis on cutting-edge research in:</p>
-												<ul>
-													<li> <strong>Medical Image Computing</strong> (MRI, CT, X-ray, Ultrasound, Dermoscopy, etc.)</li>
-													<li> <strong>AI & Machine Learning</strong> in healthcare</li>
-													<li> <strong>Computer-Assisted Interventions & Robotics</strong></li>
-													<li> <strong>Advanced Imaging & Multi-modal Fusion</strong></li>
-												</ul>
+												<p>
+													The scope of the workshop covers medical image computing (MIC) and computer-assisted interventions (CAI), in line with the scientific goals of the MICCAI Society. We welcome <strong>original research that introduces new methods, applies existing techniques in novel ways, or provides in-depth analysis of medical imaging problems.</strong>
+													Contributions may also include rigorous benchmarking or the release of new datasets that support the development and evaluation of medical imaging approaches.
+												</p>
+												<p>
+													This includes work on image formation, reconstruction, segmentation, diagnosis, and decision support. Studies combining imaging with clinical, molecular, or wearable data, or handling multimodal and longitudinal inputs, are also welcome. 
+													We encourage submissions focused on building reliable, fair, and generalizable AI systems, as well as solutions for personalized imaging, point-of-care use, and underserved populations.
+													Topics such as surgical data science, robotic interventions, and teleradiology are of interest. <strong>Research targeting region-specific challenges—especially in the Pan-Asian context—is welcome</strong> and reflects this year’s special emphasis on the region. 
+													With growing interest in emerging areas such as foundation models and generative AI, we also invite submissions exploring their applications in medical imaging and computer-assisted interventions.
+												</p>
 											</div>
 									
 											<div class="section">
-												<h2>🏅 Awards & Publication Opportunities</h2>
-												<p> <strong>Outstanding contributions</strong> will be recognized in an <strong>awards ceremony</strong>.</p>
-												<p> <strong>Top papers</strong> will be invited to submit to <strong>MELBA (The Journal of Machine Learning for Biomedical Imaging)</strong>.</p>
+												<h2>🏅 Awards and Publication Opportunities</h2>
+												<ul>
+												<li><strong>The top three outstanding papers</strong> will be <strong>recognized at the awards ceremony</strong> and will receive $300, $200, and $100.</li>
+												<li>Accepted full papers will be published in the <strong>Springer LNCS</strong> MICCAI 2025 workshop proceedings.</li>
+												<li><strong>Selected papers will be invited</strong> to submit extended versions to <strong>MELBA (The Journal of Machine Learning for Biomedical Imaging)</strong>.</li>
+												<li>Accepted contributions will also be featured through our MICCAI Student Board social media channels to increase visibility and outreach.</li>
+											</ul>
 											</div>
-
-
+										</div>
 									</div>
 								</section>
 								
-								<section, id="deadlines">
+								<section id="deadlines">
 									<header class="major">
-										<h3>Important Dates</h3>
+										<h2>Important Dates</h2>
 									</header>
-										<p>
-											Call for papers: April 1, 2025* <br>
-											Submission portal opens: May 15, 2025  <br>
-											Paper submission due: June 1, 2025 <br>
-											Reviews released to authors: June 16, 2025 <br>
-											Rebuttals due: June 26, 2025 <br>
-											Final decisions: June 30, 2025 <br>
-											Camera-ready due: July 7, 2025 <br><br>
-
-											<i> * All dates are in <a href="https://en.wikipedia.org/wiki/Pacific_Time_Zone" target="_blank">23:59 Pacific Time Zone (PT)</i> </a>
-										</p>
-
-
+									<div class="section">
+										<p>All dates are in <a href="https://en.wikipedia.org/wiki/Pacific_Time_Zone" target="_blank">23:59 Pacific Time Zone (PT)</a></p>
+										<table class="important-dates-table">
+											<tr>
+												<td>Call for papers</td>
+												<td>April 1, 2025</td>
+											</tr>
+											<tr>
+												<td>Submission portal opens</td>
+												<td>May 15, 2025</td>
+											</tr>
+											<tr>
+												<td>Paper submission due</td>
+												<td>June 1, 2025</td>
+											</tr>
+											<tr>
+												<td>Reviews released to authors</td>
+												<td>June 16, 2025</td>
+											</tr>
+											<tr>
+												<td>Rebuttals due</td>
+												<td>June 26, 2025</td>
+											</tr>
+											<tr>
+												<td>Final decisions</td>
+												<td>June 30, 2025</td>
+											</tr>
+											<tr>
+												<td>Camera-ready due</td>
+												<td>July 7, 2025</td>
+											</tr>
+										</table>
+									</div>
+								</section>
 								
 								<section id="submission">
 									<header class="major">
 										<h2>Submission</h2>
 									</header>
-									<style>
-										.inner {
-											text-align: justify;
-										}
-									</style>
-									<p>Submissions are double-blind reviewed and must adhere to the following guidelines: maximum paper length: 8 pages (text, figures, and tables) and additional 2 pages allowed for references. Details on the template for the paper can be found <a href="https://conferences.miccai.org/2025/en/PAPER-SUBMISSION-GUIDELINES.html" target="_blank"> here </a>. Accepted papers will be published in an <a href="https://www.springer.com/gp/computer-science/lncs" target="_blank">LNCS </a> volume by Springer Nature.</p>
-									<p> The manuscripts can be submitted at OpenReview (TBA). </p>
-										 <!-- <a href="https://openreview.net/group?id=MICCAI.org/2024/Workshop/MSB" target="_blank"> https://openreview.net/group?id=MICCAI.org/2024/Workshop/MSB.</a> </p> -->
+									<div class="section">
+										<p>Submissions will undergo <strong>double-blind peer review</strong> and must follow these guidelines: a maximum of 8 pages for content (including figures and tables), with up to 2 additional pages for references. The paper template and formatting details can be found <a href="https://conferences.miccai.org/2025/en/PAPER-SUBMISSION-GUIDELINES.html" target="_blank">here</a>. Submissions should follow the same guidelines and process as the MICCAI 2025 main conference.</p>
+										<p>Manuscripts must be submitted via the <a href="https://openreview.net/group?id=MICCAI.org/2025/Workshop/MSB_EMERGE" target="_blank">MSB EMERGE 2025 OpenReview submission portal.</a> Each submission will be reviewed by at least three reviewers. For accepted papers, official reviews are anonymous and publicly visible. Rebuttals and preprints will also be made publicly available on the OpenReview platform.</p>
+									</div>
 								</section>			
 
-								
-
-							<section id="camerreadysubmission">
+								<section id="camerreadysubmission">
 									<header class="major">
 										<h2>Instructions for Camera-Ready Submission</h2>
 									</header>
-									<style>
-										.inner {
-											text-align: justify;
-										}
-									</style>
-									TBA
-									<!-- <p>Please submit a PDF version of your paper. Additionally, you will need to submit the following doucments: (i) source files (LaTeX, Word, etc.), (ii) duly signed <i>License to Publish</i> document by one of the authors, and (iii) a separate pdf document outlining the changes made to your paper based on reviewer feedback.
-										
-
-									<p>Camera-Ready Submission Guidelines</p>
-
-									<ol>
-										<li>Page Limit: The submitted manuscript should be a maximum of 9 pages, plus an additional 2 pages for references. The overall paper length must not exceed 11 pages (including appendix and references).</li>
-
-										<li>Paper Number: Please use your two-digit OpenReview submission number for your paper (e.g., use "01" for submission number 1).</li>
-
-										<li>License to Publish: You can find the appropriate form on: <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank">https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines</a>. Please be sure to use the following title for the proceedings when completing the License to Publish form: "Medical Information Computing, MImA 2024 + MSB EMERGE 2024 (MICCAI Workshops)".</li>
-
-										<li>ORCID IDs: We request all authors to include their ORCID IDs in the publication. You can find more information about ORCID IDs here: <a href="http://bit.ly/2H5xBpN" target="_blank">http://bit.ly/2H5xBpN</a>.</li>
-									</ol>
-
-									<p>Please update your submission on OpenReview by August 30th, 2024. You can do this by editing your original submission and selecting "Camera Ready Version." The system will allow you to update the following fields: Title, Keywords, TL;DR, Abstract, and Camera-Ready ZIP submission (containing your paper, source code, license, and changes document).</p> -->
+									<div class="section">
+										<p>TBA</p>
+									</div>
 								</section>			
 
 								<hr class="major" />
-							<!-- Section -->
-								
-
-								<section, id="speakers">
+							
+								<section id="speakers">
 									<header class="major">
 										<h2>Speakers</h2>
 									</header>
-									TBA
-										<!-- <div class="speaker-profile">
-											<article style="display: flex; align-items: flex-start;">
-												<span class="image object" style="flex: 0 0 150px;">
-													<img src="images/pictures/mathias-unberath-300x300.jpg" alt="" width="150" height="150"/>
-												</span>
-												<div class="content" style="flex: 1; margin-left:20px; padding:10px;">
-													<h3>Mathias Unberath</h3>
-													<p>Mathias Unberath is the John C. Malone Associate Professor in the Department of Computer Science with secondary appointments in the Departments of <a href="https://www.hopkinsmedicine.org/wilmer">Ophthalmology</a> and <a href="https://www.hopkinsmedicine.org/otolaryngology">Otolaryngology—Head and Neck Surgery</a> at the School of Medicine. He is also a core faculty member of the <a href="https://lcsr.jhu.edu/">Laboratory for Computational Sensing and Robotics</a> (LCSR) and the <a href="https://malonecenter.jhu.edu/">Malone Center for Engineering in Healthcare</a> and an affiliate faculty member in the <a href="https://iaa.jhu.edu/">Institute for Assured Autonomy</a>.</p>
-													<p>With his group, the <a href="https://arcade.cs.jhu.edu/">Advanced Robotics and Computationally AugmenteD Environments (ARCADE) Lab</a>, Unberath builds the future of computer-assisted medicine. Through synergistic research on imaging, computer vision, machine learning, and interaction design, he invents human-centered solutions that are embodied in emerging technologies such as mixed reality and robotics.</p>
-													<p>He has published more than 150 journal and conference articles and has received numerous awards, grants, and fellowships, including the National Institute of Biomedical Imaging and Bioengineering Trailblazer R21 Award, an NSF CAREER Award, a Google Research Scholar Award, a Johns Hopkins Career Impact Award, and an inaugural Johns Hopkins Data Science and AI Institute Junior Faculty Award.</p>
-													<p>While completing a bachelor’s in physics and master’s in optical technologies at the Friedrich-Alexander University of Erlangen-Nürnberg (FAU), Unberath also studied at the University of Eastern Finland as an Erasmus Mundus scholar in 2011 and joined Stanford University as a DLR-DAAD fellow in 2014. He received his PhD in computer science from FAU and graduated summa cum laude in 2017. Prior to joining as faculty, Unberath was an assistant research professor in the department and a postdoctoral fellow at LCSR.</p>
-												</div>
-											</article>
-										</div> -->
+									<div class="section">
+										<p>TBA</p>
+									</div>
 								</section>
-
 
 								<hr class="major" />
 
-								<section, id="schedule">
+								<section id="schedule">
 									<header class="major">
 										<h2>Schedule</h2>
 									</header>
-									<table>
-										<thead>
-										  <tr>
-											<th>Time</th>
-											<th>Speaker and Title</th>
-										  </tr>
-										</thead>
-										
-										  <tr>
-											<td>08:00 - 08:10</td>
-											<td>Opening Remarks and Introduction</td>
-										  </tr>
-										  <tr>
-											<td>08:10 - 08:50</td>
-											<td> <strong>Keynote Talk</strong> (TBA)</td>
-										  </tr>
-										  <tr>
-											<td>08:50 - 09:40</td>
-											<td>Oral Session 1 (Main Workshop Track - 3 x 15 min)</td>
-										  </tr>
-										  <tr>
-											<td>09:40 - 10:00</td>
-											<td>Poster Teasers (20 x 1 min)</td>
-										  </tr>
-										  <tr>
-											<td>10:00 - 10:45</td>
-											<td>Coffee + Posters</td>
-										  </tr>
-										  <tr>
-											<td>10:45 - 11:30</td>
-											<td>Oral Session 2 (Main Workshop Track 3 x 15 min)</td>
-										  </tr>
-										  <tr>
-											<td>11:30 - 12:00</td>
-											<td>Oral Session 3 (Pan-Asia Track 3 x 10 min)</td>
-										  </tr>
-										  <tr>
-											<td>12:00 - 12:20</td>
-											<td>Oral Session 4 (Conference-to-Workshop Track - 4 x 5 min)</td>
-										  </tr>
-										  <tr>
-											<td>12:20 - 12:30</td>
-											<td>Closing Remarks and Awards</td>
-										  </tr>
-									  </table>
+									<div class="section">
+										<table>
+											<thead>
+											  <tr>
+												<th>Time</th>
+												<th>Speaker and Title</th>
+											  </tr>
+											</thead>
+											<tbody>
+											  <tr>
+												<td>08:00 - 08:10</td>
+												<td>Opening Remarks and Introduction</td>
+											  </tr>
+											  <tr>
+												<td>08:10 - 08:50</td>
+												<td><strong>Keynote Talk</strong> (TBA)</td>
+											  </tr>
+											  <tr>
+												<td>08:50 - 09:40</td>
+												<td>Oral Session 1 (Main Workshop Track - 3 x 15 min)</td>
+											  </tr>
+											  <tr>
+												<td>09:40 - 10:00</td>
+												<td>Poster Teasers (20 x 1 min)</td>
+											  </tr>
+											  <tr>
+												<td>10:00 - 10:45</td>
+												<td>Coffee + Posters</td>
+											  </tr>
+											  <tr>
+												<td>10:45 - 11:30</td>
+												<td>Oral Session 2 (Main Workshop Track 3 x 15 min)</td>
+											  </tr>
+											  <tr>
+												<td>11:30 - 12:00</td>
+												<td>Oral Session 3 (Pan-Asia Track 3 x 10 min)</td>
+											  </tr>
+											  <tr>
+												<td>12:00 - 12:20</td>
+												<td>Oral Session 4 (Conference-to-Workshop Track - 4 x 5 min)</td>
+											  </tr>
+											  <tr>
+												<td>12:20 - 12:30</td>
+												<td>Closing Remarks and Awards</td>
+											  </tr>
+											</tbody>
+										</table>
+									</div>
 								</section>
-
 
 								<hr class="major" />
 
-
-							<!-- Section -->
-
-							<section, id="orga">
-								<header class="major">
+								<!-- Organization Section -->
+								<section id="orga">
+									<header class="major">
 									<h2>Organization</h2>
-								</header>
-								<div class="features">
-									<article>
-										<span class="image object"><img src="images/pictures/naren_akash.png" alt="" width="150" height="150"/></span>
-										<div class="content" style="vertical-align:middle;margin-left:5px;margin-top:5px">
-											<h3>Naren Akash</h3>
-											<p style="margin: 2px 0; line-height: 1.5;">President, MICCAI Student Board</p>
-											<p style="margin: 2px 0; line-height: 1.5;">IIIT Hyderabad</p>
-											<p style="margin: 2px 0; line-height: 1.5;"><a href="mailto:naren.akash@research.iiit.ac.in ">naren.akash@research.iiit.ac.in </a></p>
-											<a href="https://researchweb.iiit.ac.in/~naren.akash/">Website</a>
+									</header>
+									
+									<!-- MICCAI Student Board Members -->
+									<div class="features" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 0 0 30px 0; padding: 0;">
+									<!-- Person 1 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/narenakash.png" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Naren Akash</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">President, MICCAI Student Board</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>IIIT Hyderabad, India</strong></p>
+										<p style="margin: 0; line-height: 1.4; font-size: 0.9rem;"><a href="mailto:naren.akash@research.iiit.ac.in">Email</a> | <a href="https://www.narenakash.com">Website</a></p>
 										</div>
 									</article>
-									<article>
-										<span class="image object"><img src="images/pictures/AmarKumar.jpeg" alt="" width="150" height="150"/></span>
-										<div class="content" style="vertical-align:middle;margin-left:5px;margin-top:5px">
-											<h3>Amar Kumar</h3>
-											<p style="margin: 2px 0; line-height: 1.5;">Vice-President, MICCAI Student Board</p>
-											<p style="margin: 2px 0; line-height: 1.5;">McGill University</p>
-											<p style="margin: 2px 0; line-height: 1.5;"><a href="mailto:amar.kumar@mail.mcgill.ca">amar.kumar@mail.mcgill.ca </a></p>
-											<a href="https://www.cim.mcgill.ca/~amarkr/">Website</a>
+									
+									<!-- Person 2 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/amar_kumar.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Amar Kumar</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Vice-President, MICCAI Student Board</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>McGill University, Canada</strong></p>
+										<p style="margin: 0; line-height: 1.4; font-size: 0.9rem;"><a href="mailto:amar.kumar@mail.mcgill.ca">Email</a> | <a href="https://www.cim.mcgill.ca/~amarkr/">Website</a></p>
 										</div>
 									</article>
-									<article>
-										<span class="image object"><img src="images/pictures/CosminBercea.jpeg" alt="" width="150" height="150"/></span>
-										<div class="content" style="vertical-align:middle;margin-left:5px;margin-top:5px">
-											<h3>Cosmin I. Bercea</h3>
-											<p style="margin: 2px 0; line-height: 1.5;">Scientific Events Officer, MICCAI Student Board</p>
-											<p style="margin: 2px 0; line-height: 1.5;">Technical University of Munich</p>
-											<p style="margin: 2px 0; line-height: 1.5;"><a href="mailto:cosmin.bercea@tum.de">cosmin.bercea@tum.de</a></p>
-											<a href="https://cosmin-bercea.com/">Website</a>
+									
+									<!-- Person 3 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/cosmin_bercea.png" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Cosmin I. Bercea</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Scientific Events Officer, MICCAI Student Board</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>Technical University of Munich, Germany</strong></p>
+										<p style="margin: 0; line-height: 1.4; font-size: 0.9rem;"><a href="mailto:cosmin.bercea@tum.de">Email</a> | <a href="https://cosmin-bercea.com/">Website</a></p>
 										</div>
 									</article>
 									</div>
+									
+									<!-- Centered Subheading -->
+									<h4 style="text-align: center; color: #3e6a88; margin: 30px 0; font-size: 1.2rem; font-weight: 200;">MICCAI 2025 Young Scholars Initiative Committee</h4>
+									
+									<!-- Advisory/Young Scientists Committee Members -->
+									<div class="features" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 0; padding: 0;">
+									<!-- Advisory Member 1 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/KimM-6389.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Minjeong Kim</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Associate Professor and Department Head</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>University of North Carolina, United States</strong></p>
+										</div>
+									</article>
+									
+									<!-- Advisory Member 2 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/islem_rekik.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Islem Rekik</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Associate Professor</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>Imperial College London, United Kingdom</strong></p>
+										</div>
+									</article>
+									
+									<!-- Advisory Member 3 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/ehsanadeli.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Ehsan Adeli</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Assistant Professor</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>Stanford University, United States</strong></p>
+										</div>
+									</article>
+									
+									<!-- Advisory Member 4 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/anees_kazi.jpg" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Anees Kazi</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Research Scientist</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>Harvard Medical School, United States</strong></p>
+										</div>
+									</article>
+									
+									<!-- Advisory Member 5 -->
+									<article style="display: flex; background-color: #f8f9fa; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); width: 100%; margin: 0;">
+										<div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start;">
+										<img src="images/pictures2025/seong_jae_hwang.png" alt="" style="width: 80px; height: 80px; object-fit: cover;"/>
+										</div>
+										<div style="margin-left: 15px; flex-grow: 1; min-width: 0;">
+										<h3 style="color: #3e6a88; margin: 0 0 8px 0; font-size: 1.1rem;">Seong Jae Hwang</h3>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;">Associate Professor</p>
+										<p style="margin: 0 0 4px 0; line-height: 1.4; font-size: 0.9rem;"><strong>Yonsei University, South Korea</strong></p>
+										</div>
+									</article>
+									
+									<!-- Add a hidden 6th item to complete the grid row for better alignment -->
+									<article style="visibility: hidden; display: flex; background-color: transparent; box-shadow: none;"></article>
+									</div>
 								</section>
-								<section, id="advisory">
-									<header class="major">
-										<h2>Advisory Members</h2>
-									</header>
-									<p>MICCAI 2025 Young Sholars Initiative Committee</p>
-										TBA
-											<!-- <p style="margin: 0;">Aisha Urooj, Mayo Clinic, USA</p> -->
-								</section>
-								<section, id="pc">
+
+								<section id="pc">
 									<header class="major">
 										<h2>Program Committee</h2>
 									</header>
-										TBA
-											<!-- <p style="margin: 0;">Aisha Urooj, Mayo Clinic, USA</p> -->
+									<div class="section">
+										<p>TBA</p>
+									</div>
 								</section>
 						</div>
 					</div>
@@ -325,21 +567,13 @@
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section> -->
-
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="2024.html">Previous edition (2024)</a></li>
-										<li><a href="index.html">Home (2025)</a></li>
+										<li><a href="index.html">Home</a></li>
 										<li><a href="index.html#deadlines">Important Dates</a></li>
 										<li><a href="index.html#submission">Submission</a></li>
 										<li><a href="index.html#camerreadysubmission">Camera Ready Instructions</a></li>
@@ -347,6 +581,7 @@
 										<li><a href="index.html#schedule">Program</a></li>
 										<li><a href="index.html#orga">Organization</a></li>
 										<li><a href="index.html#pc">Program Committee</a></li>
+										<li><a href="2024.html">Previous Edition (2024)</a></li>
 									</ul>
 								</nav>
 
@@ -357,15 +592,9 @@
 								<header class="major">
 									<h2>Contact</h2>
 								</header>
-								<!--
-									<p>Please reach out through the following channels, or send us a Twitter PM.</p>
-								-->	
 								<ul class="contact">
-									<li class="icon solid fa-envelope">miccaimsb@gmail.com</a></li>
-									<!-- <li class="icon solid fa-phone">(+49)  </li> -->
-									<li class="icon solid fa-home">Daejeon, South Korea 
-									<!-- </br> October 6, 2024 -->
-									</li>
+									<li class="icon solid fa-envelope"><a href="mailto:miccai-student-board@csail.mit.edu">miccai-student-board@csail.mit.edu</a></li>
+									<li class="icon solid fa-home">Daejeon, South Korea</li>
 								</ul>
 							</section>
 
@@ -387,5 +616,3 @@
 
 	</body>
 </html>
-
-
