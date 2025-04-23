@@ -207,6 +207,143 @@
 					margin-top: 1em;
 				}
 			}
+
+			/* Typography Improvements */
+
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Set base font */
+body {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px !important;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6, 
+header.major h2,
+.workshop-title,
+.section h2 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #2c4d64;
+}
+
+/* Specific heading tweaks */
+.workshop-title {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 1.6em;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 1.2em;
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+/* Strong and emphasis */
+strong, b {
+    font-weight: 600;
+    color: #2c4d64;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: #3e6a88;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #5588aa;
+    text-decoration: underline;
+}
+
+/* List styles */
+ul li {
+    line-height: 1.7;
+}
+
+/* Table text */
+table th {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+table td {
+    font-size: 0.95em;
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Speaker profiles */
+.speaker-profile h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Adjust size for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px !important;
+    }
+    
+    .workshop-title {
+        font-size: 1.4em;
+    }
+    
+    .section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Sidebar menu */
+#sidebar #menu ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+/* Highlight box */
+.highlight-box {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* Organization section */
+.features article h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.features article p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -231,14 +368,12 @@
 								<section id="news">
 									<p class="workshop-title">THE 2ND MICCAI STUDENT BOARD (MSB) EMERGE WORKSHOP</p> 
 									<div class="content">
-										<header class="major">
-											<h2>News</h2>
-										</header>	
-										<div class="highlight-box">
+										
+										
 											<p>
 												📍 MSB EMERGE 25 will be held in-person as a half-day satellite event of MICCAI 2025 in Daejeon, South Korea 🇰🇷
 											</p>
-										</div>
+										
 										<header class="major">
 											<h2>Overview</h2>
 										</header>
