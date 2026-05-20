@@ -201,6 +201,37 @@
 			.btn:hover {
 				background-color: #2c4d64;
 			}
+
+			.site-news {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 1.2em 0;
+				border-bottom: 1px solid #e9ecef;
+				padding-bottom: 1em;
+			}
+
+			.site-news li {
+				display: flex;
+				align-items: flex-start;
+				gap: 0.5em;
+				margin: 0;
+				padding: 0;
+				font-size: 1em;
+				line-height: 1.6;
+			}
+
+			.site-news .site-news-icon {
+				color: #3e6a88;
+				margin-top: 0.2em;
+				flex-shrink: 0;
+			}
+
+			.site-news time {
+				font-weight: 600;
+				color: #3e6a88;
+				margin-right: 0.35em;
+				flex-shrink: 0;
+			}
 			
 			@media screen and (max-width: 768px) {
 				.speaker-profile article,
@@ -472,8 +503,13 @@ table td {
 								<section id="news">
 									<p class="workshop-title">THE 3RD MICCAI STUDENT BOARD (MSB) EMERGE WORKSHOP</p> 
 									<div class="content">
-										
-										
+										<ul class="site-news">
+											<li>
+												<span class="site-news-icon icon solid fa-bullhorn" aria-hidden="true"></span>
+												<time datetime="2026-05-15">[2026-05-15]</time>
+												<span>Submissions are now open on <a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE&referrer=%5BHomepage%5D(%2F)#tab-your-consoles" target="_blank" rel="noopener noreferrer">OpenReview</a>!.</span>
+											</li>
+										</ul>
 											<p>
 												📍 MSB EMERGE 26 will be held in-person as a half-day satellite event of MICCAI 2026 in Strasbourg, France 🇫🇷
 											</p>
@@ -589,10 +625,11 @@ table td {
 									</header>
 									<div class="section">
 										<p>Submissions will undergo <strong>double-blind peer review</strong> and must follow these guidelines: a maximum of 8 pages for content (including figures and tables), with up to 2 additional pages for references. The paper template and formatting details can be found <a href="https://conferences.miccai.org/2026/en/PAPER-SUBMISSION-GUIDELINES.html" target="_blank">here</a>. Submissions should follow the same guidelines and process as the MICCAI 2026 main conference.</p>
-										<p>Manuscripts must be submitted via the MSB EMERGE 2026 OpenReview submission portal.</p>
+										<p>Manuscripts must be submitted via the <a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE&referrer=%5BHomepage%5D(%2F)#tab-your-consoles" target="_blank" rel="noopener noreferrer">MSB EMERGE 2026 OpenReview submission portal</a>.</p>
 										<!-- <ul>
-										<li><a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE" target="_blank">Archival Track Submission</a></li>
-										<li><a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE-Non_Archival_Track" target="_blank">Non-Archival Track Submission</a></li>
+										<li><a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE&referrer=%5BHomepage%5D(%2F)#tab-your-consoles" target="_blank" rel="noopener noreferrer">MSB EMERGE 2026 OpenReview submission portal</a></li>
+										<li><a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE" target="_blank" rel="noopener noreferrer">Archival Track Submission</a></li>
+										<li><a href="https://openreview.net/group?id=MICCAI.org/2026/Workshop/MSB_EMERGE-Non_Archival_Track" target="_blank" rel="noopener noreferrer">Non-Archival Track Submission</a></li>
 										</ul> -->
 										<p>Each submission will be reviewed by at least three reviewers. For accepted papers, official reviews are anonymous and publicly visible. Rebuttals and preprints will also be made publicly available on the OpenReview platform.</p>
 									</div>
